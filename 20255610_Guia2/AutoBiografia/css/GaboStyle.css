@@ -1,0 +1,355 @@
+:root {
+  --color-pagina: #d8cfc4;
+  --color-bloque-base: #ede6da;
+  --color-bloque-beige: #f5f0e8;
+  --color-encabezado: #1c1814;
+  --color-pie: #1c1814;
+  --color-tinta: #1c1814;
+  --color-tinta-suave: #5c5248;
+  --color-acento: #7a3a2c;
+  --color-acento-claro: #b8694a;
+  --color-borde: #c8bfb4;
+  --color-superficie: #fdfaf5;
+
+  --fuente-titulos: "Playfair Display", Georgia, serif;
+  --fuente-cuerpo: "Source Serif 4", Georgia, serif;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth; /* Para que el desplazamiento sea mas suave*/
+}
+
+body {
+  background-color: var(--color-pagina);
+  color: var(--color-tinta);
+  font-family: var(--fuente-cuerpo);
+  line-height: 2;
+}
+
+#encabezado-principal {
+  background-color: var(--color-encabezado);
+  color: var(--color-bloque-beige);
+  text-align: center;
+  padding: 80px 24px 64px;
+  border-bottom: 4px solid var(--color-acento);
+}
+
+#titulo-principal {
+  font-family: var(--fuente-titulos);
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+#titulo-principal em {
+  font-style: italic;
+  color: var(--color-acento-claro);
+}
+
+#navegacion-secciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+  position: sticky;
+  top: 0;
+}
+
+#navegacion-secciones>a {
+  font-family: var(--fuente-titulos);
+  font-size: 0.9rem;
+  color: var(--color-tinta-suave);
+  text-decoration: none;
+  padding: 14px 16px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#navegacion-secciones>a:hover {
+  color: var(--color-acento);
+  border-bottom-color: var(--color-acento);
+  font-weight: bold;
+}
+
+#navegacion-secciones>a:active {
+  color: var(--color-tinta);
+}
+
+#contenido-principal {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Separacion entre cada bloque */
+}
+
+.bloque-biografia {
+  background-color: var(--color-bloque-base);
+  border-radius: 25px;
+  border: 1px solid var(--color-borde);
+  padding: 48px 44px;
+}
+
+.bloque-biografia:hover {
+  border-color: var(--color-acento);
+}
+
+.bloque-biografia--variante-beige {
+  background-color: var(--color-bloque-beige);
+}
+
+.bloque-biografia h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-acento);
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.bloque-biografia h3 {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-tinta);
+  margin-bottom: 10px;
+}
+
+.bloque-biografia p {
+  color: var(--color-tinta-suave);
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+#imagen-minecraft {
+  float: right;
+  width: 40%;
+  margin: 0 0 20px 28px;
+}
+
+#imagen-minecraft img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--color-borde);
+  display: block;
+}
+
+.bloque-biografia figcaption {
+  font-size: 0.75rem;
+  color: var(--color-tinta-suave);
+  text-align: center;
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+.bloque-biografia figcaption a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.bloque-biografia figcaption a:hover {
+  text-decoration: underline;
+}
+
+.bloque-biografia dl {
+  margin-top: 32px;
+  border-top: 2px solid var(--color-acento);
+  overflow: hidden;
+  border-radius: 0 0 4px 4px;
+}
+
+.bloque-biografia dl>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-borde);
+  font-size: 0.9rem;
+}
+
+.bloque-biografia dl>div:nth-child(odd) {
+  background-color: var(--color-superficie);
+}
+
+.bloque-biografia dl>div:nth-child(even) {
+  background-color: var(--color-bloque-base);
+}
+
+.bloque-biografia--variante-beige dl>div:nth-child(even) {
+  background-color: var(--color-bloque-beige);
+}
+
+.bloque-biografia dl dt {
+  color: var(--color-tinta-suave);
+}
+
+.bloque-biografia dl dd {
+  font-weight: 600;
+  color: var(--color-tinta);
+  margin: 0;
+}
+
+#portadas-series-anime {
+  display: flex;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+#portadas-series-anime>figure {
+  flex: 1;
+  text-align: center;
+}
+
+/* Selector descendiente: img dentro de la galería */
+#portadas-series-anime img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--color-borde);
+  display: block;
+  transition: transform 0.3s;
+}
+
+#portadas-series-anime img:hover {
+  transform: scale(1.10);
+}
+
+.bloque-biografia aside {
+  background-color: var(--color-superficie);
+  border-left: 10px solid var(--color-acento);
+  border-radius: 0 4px 4px 0;
+  padding: 22px 26px;
+  margin-top: 28px;
+}
+
+/* Selector descendiente: párrafo dentro del aside */
+.bloque-biografia aside p {
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.bloque-biografia a:link {
+  color: var(--color-acento);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-acento);
+}
+
+.bloque-biografia a:visited {
+  color: var(--color-tinta-suave);
+}
+
+.bloque-biografia a:hover {
+  color: var(--color-acento-claro);
+  border-bottom-color: var(--color-acento-claro);
+}
+
+.bloque-biografia a:active {
+  color: var(--color-tinta);
+}
+
+a[href*="minecraft.net"] {
+  color: #4a7a3a;
+}
+
+a[href*="minecraft.net"]:hover {
+  color: #6aaa52;
+}
+
+a[href^="https"] {
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#pie-pagina {
+  background-color: var(--color-pie);
+  color: var(--color-borde);
+  text-align: center;
+  padding: 36px 24px;
+  border-top: 4px solid var(--color-acento);
+  margin-top: 32px;
+}
+
+#pie-pagina::before {
+  content: "◆ ◆ ◆";
+  display: block;
+  color: var(--color-acento);
+  font-size: 0.6rem;
+  letter-spacing: 10px;
+  margin-bottom: 22px;
+}
+
+#navegacion-pie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 18px;
+  position: static;
+  border: none;
+  background: none;
+}
+
+#navegacion-pie>a {
+  font-family: var(--fuente-titulos);
+  font-size: 0.8rem;
+  color: var(--color-tinta-suave);
+  text-decoration: none;
+  padding: 3px 10px;
+  border: 1px solid #3a3028;
+  border-radius: 20px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#navegacion-pie>a:hover {
+  color: var(--color-acento-claro);
+  border-color: var(--color-acento);
+  font-weight: bold;
+}
+
+#frase-cierre {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-tinta-suave);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  #titulo-principal {
+    font-size: 2.5rem;
+  }
+
+  .bloque-biografia {
+    padding: 32px 22px;
+  }
+
+  #imagen-minecraft {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  #portadas-series-anime {
+    flex-direction: column;
+  }
+
+  #navegacion-secciones>a {
+    padding: 12px 10px;
+    font-size: 0.72rem;
+  }
+}

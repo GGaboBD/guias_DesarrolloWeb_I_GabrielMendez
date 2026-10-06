@@ -1,0 +1,43 @@
+/* estilos7.css — Guía 7: 墨 Sumi-e */
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Shippori+Mincho:wght@500;700&display=swap');
+
+:root{--accent:#e0432b;--bg:#f6f3ec;--surface:#fffdf8;--text:#1a1a1a;--muted:#6d6a63;--line:#1a1a1a;--accent-text:#fff;--font:'Shippori Mincho',serif;--font-head:'Yuji Syuku',serif;--font-jp:'Yuji Syuku',serif;--w-head:400;--r-card:255px 18px 225px 18px/18px 225px 18px 255px;--r-btn:8px;--pad:48px;--gap:28px;--card-pad:36px}
+
+/* ===== LAYOUT BASE (Flexbox, responsive) ===== */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7}
+.encabezado{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:48px var(--pad)}
+.encabezado>*{position:relative;z-index:1}
+.encabezado-texto{display:flex;flex-direction:column;gap:6px}
+.kanji{position:absolute!important;z-index:0!important;right:var(--pad);top:50%;transform:translateY(-50%);font-family:var(--font-head);font-size:clamp(120px,24vw,260px);line-height:1;opacity:.14;pointer-events:none;user-select:none}
+.etiqueta{font-family:var(--font-jp);font-size:14px;letter-spacing:.25em;color:var(--muted)}
+h1{margin:0;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(36px,7vw,72px);line-height:1.15}
+h2{margin:0;display:flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(18px,3vw,22px)}
+h2 .jp{font-family:var(--font-jp);font-size:1.5em;line-height:1;color:var(--accent)}
+.volver{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:14px;transition:.25s}
+.volver:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text)}
+.contenedor{display:flex;flex-wrap:wrap;gap:var(--gap);width:100%;max-width:1100px;margin:0 auto;padding:0 var(--pad) 72px;flex:1}
+.seccion{display:flex;flex-direction:column;gap:22px;flex:1 1 100%;padding:var(--card-pad);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card)}
+.caja-enlaces{display:flex;flex-wrap:wrap;gap:12px}
+.enlace{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:15px;transition:.25s}
+.enlace:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text);transform:translateY(-2px)}
+.reto .enlace{flex:1 1 180px;flex-direction:column;align-items:flex-start;gap:2px}
+.reto .enlace small{font-family:var(--font-jp);font-size:11px;letter-spacing:.15em;opacity:.65}
+.pie{padding:28px var(--pad);text-align:center;font-family:var(--font-jp);font-size:13px;letter-spacing:.2em;color:var(--muted)}
+@media(min-width:901px){.ejercicio{flex:1 1 30%}.reto{flex:1 1 60%}}
+@media(max-width:900px){:root{--pad:24px}.encabezado{padding-top:32px;padding-bottom:32px}}
+@media(max-width:600px){:root{--pad:16px;--card-pad:20px}.encabezado{flex-direction:column;align-items:flex-start}.caja-enlaces{flex-direction:column}.enlace{width:100%}.contenedor{gap:16px}}
+
+/* 墨 Sumi-e: tinta negra sobre papel, bordes de pincel, sello hanko rojo */
+body{background:radial-gradient(ellipse at 90% 0,rgba(0,0,0,.08),transparent 45%),#f6f3ec}
+.kanji{color:#000;opacity:.9;right:var(--pad);font-size:clamp(110px,22vw,240px)}
+.encabezado{border-bottom:3px solid #1a1a1a;margin-bottom:36px}
+h1{letter-spacing:.12em}
+.etiqueta{color:var(--accent);font-weight:700}
+h2 .jp{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:3px solid var(--accent);color:var(--accent);font-size:24px;border-radius:6px;transform:rotate(-6deg)}
+.seccion{border:2.5px solid #1a1a1a}
+.enlace{border:2px solid #1a1a1a;border-radius:6px 14px 6px 14px;background:#fff}
+.enlace:hover{background:var(--accent);border-color:#1a1a1a}
+.enlace::before{content:"●";color:var(--accent);font-size:10px}
+.enlace:hover::before{color:#fff}
+@media(max-width:600px){.seccion{border-radius:40px 10px 40px 10px/10px 40px 10px 40px}}

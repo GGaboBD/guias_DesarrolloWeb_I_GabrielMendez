@@ -1,0 +1,313 @@
+/* ============================================
+   TABLA DE REFERENCIA HTML/CSS
+   Tema: Dark Minimalist
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Variables ─────────────────────────────── */
+:root {
+  --bg-page:        #0d0d0f;
+  --bg-card:        #111114;
+  --bg-table:       #13131a;
+  --bg-header:      #1a1a24;
+  --bg-row-alt:     #16161e;
+  --bg-row-hover:   #1e1e2e;
+
+  --border:         #242433;
+  --border-accent:  #3b3b5c;
+
+  --text-primary:   #ffffff;
+  --text-secondary: #d4d4e8;
+  --text-muted:     #7878a0;
+  --text-header:    #e0e0f5;
+
+  --accent-new:     #9d8fff;
+  --accent-new-bg:  rgba(157, 143, 255, 0.10);
+  --accent-new-border: rgba(157, 143, 255, 0.32);
+
+  --accent-old:     #5ecbf5;
+  --accent-old-bg:  rgba(94, 203, 245, 0.09);
+  --accent-old-border: rgba(94, 203, 245, 0.28);
+
+  --accent-glow-new: rgba(157, 143, 255, 0.18);
+  --accent-glow-old: rgba(94, 203, 245, 0.14);
+
+  --mono-color:     #c4b5fd;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --transition: 180ms ease;
+}
+
+/* ── Reset ─────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ──────────────────────────────────── */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  padding: 3rem 1.5rem 5rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Page header ───────────────────────────── */
+.page-header {
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.page-header h1 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.page-header h1 span {
+  background: linear-gradient(90deg, #9d8fff, #5ecbf5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-header p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Table wrapper ─────────────────────────── */
+.table-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 24px 70px rgba(0, 0, 0, 0.65),
+    0 0 90px rgba(157, 143, 255, 0.05);
+}
+
+/* ── Table ─────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  table-layout: fixed;
+}
+
+/* ── Column widths ─────────────────────────── */
+col.col-clasificacion { width: 17%; }
+col.col-propiedad     { width: 26%; }
+col.col-categoria     { width: 18%; }
+col.col-funcion       { width: 39%; }
+
+/* ── Header ────────────────────────────────── */
+thead tr {
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-accent);
+}
+
+thead th {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-size: 0.695rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text-header);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ── Body rows ─────────────────────────────── */
+tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-row-alt);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--bg-table);
+}
+
+tbody tr:hover {
+  background-color: var(--bg-row-hover);
+  box-shadow: inset 3px 0 0 var(--accent-new);
+}
+
+/* ── Cells ─────────────────────────────────── */
+tbody td {
+  padding: 0.85rem 1.25rem;
+  vertical-align: middle;
+  line-height: 1.55;
+}
+
+/* ── Clasificacion badge ───────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.badge-new {
+  background: var(--accent-new-bg);
+  color: var(--accent-new);
+  border: 1px solid var(--accent-new-border);
+  box-shadow: 0 0 10px var(--accent-glow-new);
+}
+
+.badge-old {
+  background: var(--accent-old-bg);
+  color: var(--accent-old);
+  border: 1px solid var(--accent-old-border);
+  box-shadow: 0 0 10px var(--accent-glow-old);
+}
+
+.badge::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* ── Propiedad (monospace) ─────────────────── */
+td.td-propiedad {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--mono-color);
+  word-break: break-word;
+}
+
+/* ── Categoria split-tag ───────────────────── */
+.tag-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.68rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  width: fit-content;
+}
+
+/* HTML tag — tono violeta suave */
+.tag-html {
+  background: rgba(157, 143, 255, 0.06);
+  color: #c4b5fd;
+  border-color: rgba(157, 143, 255, 0.22);
+}
+
+/* CSS tag — tono cian suave */
+.tag-css {
+  background: rgba(94, 203, 245, 0.06);
+  color: #7dd3fc;
+  border-color: rgba(94, 203, 245, 0.20);
+}
+
+/* Subtipo (texto después del guion) */
+.tag-sub {
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 400;
+}
+
+/* ── Funcion description ───────────────────── */
+td.td-funcion {
+  color: var(--text-secondary);
+  font-size: 0.825rem;
+}
+
+/* ── Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track  { background: var(--bg-page); }
+::-webkit-scrollbar-thumb  { background: var(--border-accent); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #666688; }
+
+/* ── Footer note ───────────────────────────── */
+.footer-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem 0.75rem 3rem;
+  }
+
+  .table-wrapper {
+    border-radius: var(--radius-lg);
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 700px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

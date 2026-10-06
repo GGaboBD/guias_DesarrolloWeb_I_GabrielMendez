@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sushi Itto El Salvador — Alta cocina japonesa contemporánea en San Salvador. Omakase, Rollos Insignia y experiencia gastronómica de lujo." />
+  <meta property="og:title" content="Sushi Itto El Salvador — La Perfección del Sabor en Cada Detalle" />
+  <meta property="og:description" content="Descubre la fusión perfecta entre tradición japonesa y vanguardia culinaria. 6 boutiques gastronómicas en El Salvador." />
+  <meta property="og:type" content="website" />
+  <title>Sushi Itto El Salvador — Omakase & Rollos de Autor</title>
+
+  <!-- Google Fonts: Playfair Display (editorial) + Plus Jakarta Sans (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       FLOATING GLASS NAVBAR
+  ═══════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <!-- Logo / Monogram -->
+      <a href="#hero" class="logo" aria-label="Sushi Itto El Salvador — Inicio">
+        <span class="logo__glyph" aria-hidden="true">寿</span>
+        <div class="logo__wordmark">
+          <span class="logo__name">Sushi Itto</span>
+          <span class="logo__location">San Salvador</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#hero"       class="nav__link">Carta Digital</a></li>
+          <li><a href="#curation"   class="nav__link">Rollos &amp; Omakase</a></li>
+          <li><a href="#branches"   class="nav__link">Sucursales</a></li>
+          <li><a href="#delivery"   class="nav__link">Delivery VIP</a></li>
+        </ul>
+      </nav>
+
+      <!-- Live status + CTA -->
+      <div class="header__actions">
+        <span class="live-status" aria-live="polite">
+          <span class="live-status__dot" aria-hidden="true"></span>
+          Abierto ahora &nbsp;·&nbsp; Domicilio activo
+        </span>
+        <a href="tel:22431166" class="btn btn--glow">Pedir en Línea</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul class="mobile-nav__list">
+        <li><a href="#hero"     class="mobile-nav__link">Carta Digital</a></li>
+        <li><a href="#curation" class="mobile-nav__link">Rollos &amp; Omakase</a></li>
+        <li><a href="#branches" class="mobile-nav__link">Sucursales</a></li>
+        <li><a href="#delivery" class="mobile-nav__link">Delivery VIP</a></li>
+        <li><a href="tel:22431166" class="btn btn--glow mobile-cta">Pedir en Línea</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════
+         HERO — CINEMATOGRAPHIC FULL-VIEWPORT
+    ═══════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Sección principal">
+
+      <!-- Ambient radial glows -->
+      <div class="hero__glow hero__glow--left"  aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--right" aria-hidden="true"></div>
+
+      <div class="hero__container">
+
+        <!-- Left: Editorial Text -->
+        <div class="hero__copy">
+
+          <div class="hero__eyebrow">
+            <span class="eyebrow__line" aria-hidden="true"></span>
+            <span>ARTE CULINARIO JAPONÉS &nbsp;•&nbsp; EL SALVADOR</span>
+          </div>
+
+          <h1 class="hero__title">
+            La Perfección<br />
+            del Sabor en<br />
+            <em class="hero__title-em">Cada Detalle</em>
+          </h1>
+
+          <p class="hero__body">
+            Cada rollo nace de la precisión del maestro y la frescura
+            del mar. Una experiencia sensorial que fusiona la milenaria
+            tradición japonesa con la pasión salvadoreña — presentada
+            con una técnica y una estética que conmueven antes del
+            primer bocado.
+          </p>
+
+          <div class="hero__ctas">
+            <a href="#curation" class="btn btn--glow">
+              Explorar Carta
+              <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#branches" class="btn btn--outline">
+              Reservar Mesa
+            </a>
+          </div>
+
+          <!-- Heritage strip -->
+          <div class="hero__heritage">
+            <div class="heritage__item">
+              <strong>1999</strong>
+              <span>En El Salvador</span>
+            </div>
+            <div class="heritage__divider" aria-hidden="true"></div>
+            <div class="heritage__item">
+              <strong>6</strong>
+              <span>Boutiques</span>
+            </div>
+            <div class="heritage__divider" aria-hidden="true"></div>
+            <div class="heritage__item">
+              <strong>+60</strong>
+              <span>Creaciones</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Bento Showcase Visual -->
+        <div class="hero__visual">
+
+          <!-- Main image frame -->
+          <div class="bento-frame">
+            <div class="bento-frame__ring" aria-hidden="true"></div>
+            <figure class="bento-frame__figure">
+              <img
+                src="https://content-cocina.lecturas.com/medio/2024/05/03/rollitos-de-salmon-y-aguacate_7465e1c3_240503112817_1200x630.jpg"
+                alt="Omakase de rollos premium con salmón, aguacate y tobiko presentados sobre pizarra negra"
+                class="bento-frame__img"
+                width="900"
+                height="900"
+                loading="eager"
+              />
+            </figure>
+            <!-- Floating badge -->
+            <div class="bento-badge bento-badge--top">
+              <span class="bento-badge__kanji" aria-hidden="true">巻</span>
+              <div class="bento-badge__info">
+                <span class="bento-badge__label">Rollo Insignia</span>
+                <span class="bento-badge__value">Otoñitto Roll</span>
+              </div>
+            </div>
+            <div class="bento-badge bento-badge--bottom">
+              <span class="bento-badge__dot bento-badge__dot--fresh" aria-hidden="true"></span>
+              <div class="bento-badge__info">
+                <span class="bento-badge__label">Ingredientes</span>
+                <span class="bento-badge__value">Salmón Fresco &amp; Aguacate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative accent dots -->
+          <div class="hero__accent-dots" aria-hidden="true">
+            <span class="accent-dot accent-dot--1"></span>
+            <span class="accent-dot accent-dot--2"></span>
+            <span class="accent-dot accent-dot--3"></span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Descubrir</span>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         TRUST & HERITAGE RIBBON
+    ═══════════════════════════════════════════════════ -->
+    <section class="ribbon" aria-label="Métricas de confianza y trayectoria">
+      <div class="ribbon__inner">
+
+        <div class="ribbon__metric">
+          <span class="ribbon__number">+25</span>
+          <span class="ribbon__label">Años de Trayectoria<br/>en El Salvador</span>
+        </div>
+
+        <div class="ribbon__rule" aria-hidden="true"></div>
+
+        <div class="ribbon__metric">
+          <span class="ribbon__number">100%</span>
+          <span class="ribbon__label">Pesca y Materia Prima<br/>Seleccionada Diariamente</span>
+        </div>
+
+        <div class="ribbon__rule" aria-hidden="true"></div>
+
+        <div class="ribbon__metric">
+          <span class="ribbon__number">6</span>
+          <span class="ribbon__label">Boutiques<br/>Gastronómicas</span>
+        </div>
+
+        <div class="ribbon__rule" aria-hidden="true"></div>
+
+        <div class="ribbon__metric">
+          <span class="ribbon__number">4.8<span class="ribbon__star">★</span></span>
+          <span class="ribbon__label">Calificación Promedio<br/>de Nuestros Comensales</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         CHEF'S CURATION — SIGNATURE ROLLS
+    ═══════════════════════════════════════════════════ -->
+    <section class="curation" id="curation" aria-labelledby="curation-title">
+      <div class="curation__container">
+
+        <!-- Section header -->
+        <header class="section-header">
+          <p class="section-header__eyebrow">
+            <span class="eyebrow__line" aria-hidden="true"></span>
+            Curaduría del Chef
+            <span class="eyebrow__line" aria-hidden="true"></span>
+          </p>
+          <h2 class="section-header__title" id="curation-title">
+            Colección<br /><em>Signature &amp; Omakase</em>
+          </h2>
+          <p class="section-header__subtitle">
+            Cuatro creaciones que concentran lo mejor de nuestra técnica japonesa,
+            elaboradas con ingredientes seleccionados y presentación de autor.
+          </p>
+        </header>
+
+        <!-- Product grid -->
+        <div class="product-grid">
+
+          <!-- Card 1: Otoñitto Roll -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=88&auto=format&fit=crop"
+                alt="Rollo Otoñitto con salmón fresco, aguacate y tobiko naranja"
+                class="product-card__img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="product-card__media-overlay" aria-hidden="true"></div>
+              <span class="product-card__tag">Spicy Signature</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <h3 class="product-card__name">Otoñitto Roll</h3>
+                <span class="product-card__price">$8.99</span>
+              </div>
+              <p class="product-card__ingredients">
+                Salmón atlántico · Aguacate Hass · Pepino japonés ·
+                Tobiko naranja · Salsa ponzu de la casa
+              </p>
+              <button class="product-card__cta" type="button" aria-label="Agregar Otoñitto Roll al pedido">
+                <span>+ Ordenar</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2: Dinamita Roll (FEATURED) -->
+          <article class="product-card product-card--featured">
+            <div class="product-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?w=600&q=88&auto=format&fit=crop"
+                alt="Dinamita Roll con salmón flambeado, jalapeño y salsa especial"
+                class="product-card__img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="product-card__media-overlay" aria-hidden="true"></div>
+              <span class="product-card__tag product-card__tag--gold">👑 Rollo Insignia</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <h3 class="product-card__name">Dinamita Roll</h3>
+                <span class="product-card__price product-card__price--gold">$10.99</span>
+              </div>
+              <p class="product-card__ingredients">
+                Salmón flambeado · Jalapeño fresco · Mango manila ·
+                Ajonjolí dorado · Salsa dinamita artesanal
+              </p>
+              <button class="product-card__cta product-card__cta--gold" type="button" aria-label="Agregar Dinamita Roll al pedido">
+                <span>+ Ordenar</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3: Tempura Especial -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="https://gruponayasia.com/wp-content/uploads/2023/02/california-roll-premium.jpg"
+                alt="Tempura Especial con camarón crujiente y mayonesa spicy"
+                class="product-card__img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="product-card__media-overlay" aria-hidden="true"></div>
+              <span class="product-card__tag">Tempura Crunch</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <h3 class="product-card__name">Tempura Especial</h3>
+                <span class="product-card__price">$9.49</span>
+              </div>
+              <p class="product-card__ingredients">
+                Camarón tempura artesanal · Queso crema suave ·
+                Cebollín crocante · Mayonesa spicy de jalapeño
+              </p>
+              <button class="product-card__cta" type="button" aria-label="Agregar Tempura Especial al pedido">
+                <span>+ Ordenar</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4: Salmón Especial -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=600&q=88&auto=format&fit=crop"
+                alt="Salmón Especial con láminas de salmón noruego y salsa de trufa"
+                class="product-card__img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="product-card__media-overlay" aria-hidden="true"></div>
+              <span class="product-card__tag">Truffle Infused</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <h3 class="product-card__name">Salmón Especial</h3>
+                <span class="product-card__price">$9.99</span>
+              </div>
+              <p class="product-card__ingredients">
+                Salmón noruego premium · Aguacate · Pepino ·
+                Aceite de trufa blanca · Micro hierbas frescas
+              </p>
+              <button class="product-card__cta" type="button" aria-label="Agregar Salmón Especial al pedido">
+                <span>+ Ordenar</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA to full menu -->
+        <div class="curation__footer">
+          <a href="#" class="btn btn--ghost">
+            Ver Carta Completa
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         ABOUT SPLIT — HERITAGE & PHILOSOPHY
+    ═══════════════════════════════════════════════════ -->
+    <section class="about" id="about" aria-labelledby="about-title">
+
+      <div class="about__image-col">
+        <img
+          src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&q=85&auto=format&fit=crop"
+          alt="Maestro chef japonés preparando sushi con precisión milenaria"
+          class="about__img"
+          width="800"
+          height="1000"
+          loading="lazy"
+        />
+        <div class="about__img-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="about__content">
+        <header class="section-header section-header--left">
+          <p class="section-header__eyebrow">
+            <span class="eyebrow__line" aria-hidden="true"></span>
+            Nuestra Filosofía
+          </p>
+          <h2 class="section-header__title" id="about-title">
+            Tradición japonesa<br /><em>con alma salvadoreña</em>
+          </h2>
+        </header>
+
+        <p class="about__text">
+          Desde 1988 en México y desde 1999 en El Salvador, Sushi Itto
+          ha perfeccionado el arte de traducir la cocina japonesa para
+          el paladar latinoamericano — sin comprometer la autenticidad
+          de sus técnicas ni la pureza de sus ingredientes.
+        </p>
+        <p class="about__text">
+          Cada boutique gastronómica es diseñada para que el comensal
+          viva un ritual completo: desde la selección de la materia prima
+          fresca cada mañana, hasta la presentación final que convierte
+          cada plato en una obra de arte efímera.
+        </p>
+
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-number">1999</span>
+            <span class="about__stat-label">Llegamos a El Salvador</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number">6</span>
+            <span class="about__stat-label">Restaurantes abiertos</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number">+25</span>
+            <span class="about__stat-label">Años de excelencia</span>
+          </div>
+        </div>
+
+        <a href="#branches" class="btn btn--glow">Visítanos</a>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         BRANCHES — BOUTIQUES GASTRONÓMICAS
+    ═══════════════════════════════════════════════════ -->
+    <section class="branches" id="branches" aria-labelledby="branches-title">
+      <div class="branches__container">
+
+        <header class="section-header">
+          <p class="section-header__eyebrow">
+            <span class="eyebrow__line" aria-hidden="true"></span>
+            Encuéntranos
+            <span class="eyebrow__line" aria-hidden="true"></span>
+          </p>
+          <h2 class="section-header__title" id="branches-title">
+            Espacios &amp;<br /><em>Boutiques en El Salvador</em>
+          </h2>
+          <p class="section-header__subtitle">
+            Cada sucursal es una experiencia diseñada para que descubras
+            el auténtico sabor de la cocina japonesa contemporánea.
+          </p>
+        </header>
+
+        <div class="branches__grid">
+
+          <!-- San Benito -->
+          <article class="branch-card">
+            <div class="branch-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=600&q=80&auto=format&fit=crop"
+                alt="Interior del restaurante Sushi Itto San Benito"
+                class="branch-card__img"
+                width="600"
+                height="340"
+                loading="lazy"
+              />
+              <div class="branch-card__media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="branch-card__body">
+              <div class="branch-card__header">
+                <h3 class="branch-card__name">San Benito</h3>
+                <span class="branch-card__status">● Abierto</span>
+              </div>
+              <address class="branch-card__address">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+                Blvd. El Hipódromo No.40, Col. San Benito
+              </address>
+              <p class="branch-card__hours">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Lun–Jue 11:00–22:00 &nbsp;|&nbsp; Vie–Dom 11:00–23:00
+              </p>
+              <a href="https://maps.google.com/?q=Sushi+Itto+San+Benito+San+Salvador" target="_blank" rel="noopener noreferrer" class="branch-card__map-link">
+                Ver en Google Maps
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Santa Elena -->
+          <article class="branch-card">
+            <div class="branch-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&auto=format&fit=crop"
+                alt="Ambiente del restaurante Sushi Itto Santa Elena"
+                class="branch-card__img"
+                width="600"
+                height="340"
+                loading="lazy"
+              />
+              <div class="branch-card__media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="branch-card__body">
+              <div class="branch-card__header">
+                <h3 class="branch-card__name">Santa Elena</h3>
+                <span class="branch-card__status">● Abierto</span>
+              </div>
+              <address class="branch-card__address">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+                Plaza Santa Elena, Antiguo Cuscatlán, La Libertad
+              </address>
+              <p class="branch-card__hours">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Lun–Jue 11:00–22:00 &nbsp;|&nbsp; Vie–Dom 11:00–23:00
+              </p>
+              <a href="https://maps.google.com/?q=Sushi+Itto+Santa+Elena+Antiguo+Cuscatlan" target="_blank" rel="noopener noreferrer" class="branch-card__map-link">
+                Ver en Google Maps
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Multiplaza -->
+          <article class="branch-card">
+            <div class="branch-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80&auto=format&fit=crop"
+                alt="Boutique gastronómica Sushi Itto Multiplaza"
+                class="branch-card__img"
+                width="600"
+                height="340"
+                loading="lazy"
+              />
+              <div class="branch-card__media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="branch-card__body">
+              <div class="branch-card__header">
+                <h3 class="branch-card__name">Multiplaza</h3>
+                <span class="branch-card__status">● Abierto</span>
+              </div>
+              <address class="branch-card__address">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+                C.C. Multiplaza, Las Terrazas P.B., San Salvador
+              </address>
+              <p class="branch-card__hours">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Lun–Jue 11:00–22:00 &nbsp;|&nbsp; Vie–Dom 11:00–23:00
+              </p>
+              <a href="https://maps.google.com/?q=Sushi+Itto+Multiplaza+El+Salvador" target="_blank" rel="noopener noreferrer" class="branch-card__map-link">
+                Ver en Google Maps
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         DELIVERY VIP BANNER
+    ═══════════════════════════════════════════════════ -->
+    <section class="delivery" id="delivery" aria-labelledby="delivery-title">
+
+      <!-- Background image with cinematic overlay -->
+      <div class="delivery__bg" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1617196034238-6e4e3de94a1b?w=1600&q=80&auto=format&fit=crop"
+          alt=""
+          class="delivery__bg-img"
+          width="1600"
+          height="700"
+          loading="lazy"
+          aria-hidden="true"
+        />
+        <div class="delivery__bg-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="delivery__inner">
+
+        <div class="delivery__copy">
+          <p class="delivery__eyebrow">
+            <span class="eyebrow__line eyebrow__line--light" aria-hidden="true"></span>
+            Delivery &amp; Takeout VIP
+            <span class="eyebrow__line eyebrow__line--light" aria-hidden="true"></span>
+          </p>
+          <h2 class="delivery__title" id="delivery-title">
+            Sushi de Autor,<br /><em>Directo a Tu Puerta</em>
+          </h2>
+          <p class="delivery__body">
+            Empaque térmico premium diseñado para preservar la temperatura,
+            textura y presentación de cada creación — como si el chef te
+            la entregara en mano. Servicio activo en toda el área
+            metropolitana de San Salvador y Santa Tecla.
+          </p>
+
+          <div class="delivery__features">
+            <div class="delivery__feature">
+              <span class="delivery__feature-icon" aria-hidden="true">⚡</span>
+              <span>Entrega en 35–45 min</span>
+            </div>
+            <div class="delivery__feature">
+              <span class="delivery__feature-icon" aria-hidden="true">🌡</span>
+              <span>Empaque térmico premium</span>
+            </div>
+            <div class="delivery__feature">
+              <span class="delivery__feature-icon" aria-hidden="true">🛡</span>
+              <span>Higiene certificada</span>
+            </div>
+          </div>
+
+          <div class="delivery__ctas">
+            <a href="tel:22431166" class="btn btn--glow btn--large">
+              <span aria-hidden="true">📞</span> 2243-1166
+            </a>
+            <a href="https://wa.me/50322431166" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--large">
+              <span aria-hidden="true">💬</span> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Mock phone order card -->
+        <div class="delivery__visual" aria-hidden="true">
+          <div class="order-card">
+            <div class="order-card__header">
+              <span class="order-card__brand">寿 Sushi Itto</span>
+              <span class="order-card__online">● En línea</span>
+            </div>
+            <div class="order-card__items">
+              <div class="order-card__row">
+                <span>Dinamita Roll ×2</span>
+                <span>$21.98</span>
+              </div>
+              <div class="order-card__row">
+                <span>Otoñitto Roll ×1</span>
+                <span>$8.99</span>
+              </div>
+              <div class="order-card__row order-card__row--total">
+                <span>Total</span>
+                <span>$30.97</span>
+              </div>
+            </div>
+            <div class="order-card__confirm">Confirmar Pedido →</div>
+            <div class="order-card__eta">
+              <span class="order-card__eta-icon">🛵</span>
+              <div>
+                <div class="order-card__eta-label">Tiempo estimado</div>
+                <div class="order-card__eta-time">38–45 min</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       MASTER FOOTER
+  ═══════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__container">
+
+      <!-- Top row -->
+      <div class="footer__top">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a href="#hero" class="logo" aria-label="Sushi Itto El Salvador">
+            <span class="logo__glyph" aria-hidden="true">寿</span>
+            <div class="logo__wordmark">
+              <span class="logo__name">Sushi Itto</span>
+              <span class="logo__location">San Salvador</span>
+            </div>
+          </a>
+          <p class="footer__tagline">
+            Desde 1999, fusionando la tradición japonesa<br />
+            con la pasión culinaria salvadoreña.
+          </p>
+          <!-- Social links -->
+          <div class="footer__socials">
+            <a href="https://instagram.com/sushiittosv" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram @sushiittosv">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://facebook.com/sushiittosv" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook @sushiittosv">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@sushiittosv" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok @sushiittosv">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9a8.23 8.23 0 004.81 1.54V7.07a4.84 4.84 0 01-1.04-.38z"/></svg>
+            </a>
+            <a href="https://wa.me/50322431166" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp Sushi Itto">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.109 1.503 5.857L.057 24l6.305-1.654A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.887a9.877 9.877 0 01-5.031-1.378l-.361-.214-3.741.981.999-3.648-.235-.374A9.861 9.861 0 012.113 12C2.113 6.53 6.529 2.113 12 2.113c5.471 0 9.887 4.416 9.887 9.887 0 5.471-4.416 9.887-9.887 9.887z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation column -->
+        <nav class="footer__nav" aria-label="Navegación del footer">
+          <h4 class="footer__nav-title">Menú</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#hero"     class="footer__link">Inicio</a></li>
+            <li><a href="#curation" class="footer__link">Carta Digital</a></li>
+            <li><a href="#branches" class="footer__link">Sucursales</a></li>
+            <li><a href="#delivery" class="footer__link">Delivery VIP</a></li>
+            <li><a href="#about"    class="footer__link">Nuestra Historia</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hours column -->
+        <div class="footer__hours">
+          <h4 class="footer__nav-title">Horarios</h4>
+          <div class="hours-row">
+            <span class="hours-day">Lunes – Jueves</span>
+            <span class="hours-time">11:00 – 22:00</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Viernes – Sábado</span>
+            <span class="hours-time">11:00 – 23:00</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Domingo</span>
+            <span class="hours-time">11:00 – 22:30</span>
+          </div>
+          <a href="tel:22431166" class="footer__phone">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.4 10.58 19.79 19.79 0 01.34 1.94 2 2 0 012.32 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.42 7.79a16 16 0 006 6l1.15-1.15a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            2243-1166 · Domicilio y reservas
+          </a>
+        </div>
+
+        <!-- Legal column -->
+        <div class="footer__legal-col">
+          <h4 class="footer__nav-title">Legal</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#" class="footer__link">Aviso de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="yr"></span> Sushi Itto El Salvador. Todos los derechos reservados.
+        </p>
+        <p class="footer__made">
+          Gastronomía japonesa de autor en El Salvador desde 1999
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ─── Minimal JavaScript (no frameworks, no libraries) ─── -->
+  <script>
+    /* Year */
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* Scroll-activated glass header */
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 60) {
+        header.classList.add('header--solid');
+      } else {
+        header.classList.remove('header--solid');
+      }
+    }, { passive: true });
+
+    /* Mobile nav toggle */
+    var hamburger = document.getElementById('hamburger');
+    var mobileNav  = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', function () {
+      var open = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!open));
+      mobileNav.setAttribute('aria-hidden',   String(open));
+      mobileNav.classList.toggle('mobile-nav--open');
+      hamburger.classList.toggle('hamburger--open');
+      document.body.classList.toggle('no-scroll');
+    });
+    document.querySelectorAll('.mobile-nav__link, .mobile-cta').forEach(function (el) {
+      el.addEventListener('click', function () {
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden',   'true');
+        mobileNav.classList.remove('mobile-nav--open');
+        hamburger.classList.remove('hamburger--open');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+
+    /* Product card order feedback */
+    document.querySelectorAll('.product-card__cta').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var span = btn.querySelector('span');
+        span.textContent = '✓ Agregado';
+        btn.classList.add('product-card__cta--added');
+        setTimeout(function () {
+          span.textContent = '+ Ordenar';
+          btn.classList.remove('product-card__cta--added');
+        }, 1600);
+      });
+    });
+
+    /* Fade-in on scroll */
+    var fadeEls = document.querySelectorAll(
+      '.product-card, .branch-card, .ribbon__metric, .about__stat'
+    );
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -72px 0px', threshold: 0.08 });
+    fadeEls.forEach(function (el) {
+      el.classList.add('fade-up');
+      io.observe(el);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+/* estilos5.css — Guía 5: 富士 Fuji */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Kiwi+Maru:wght@500&display=swap');
+
+:root{--accent:#4a6fd0;--bg:#eef3fb;--surface:rgba(255,255,255,.85);--text:#1f2d55;--muted:#6b7aa0;--line:#cfdaf0;--accent-text:#fff;--font:'Zen Maru Gothic',sans-serif;--font-head:'Kiwi Maru',serif;--font-jp:'Zen Maru Gothic',sans-serif;--w-head:500;--r-card:22px;--r-btn:12px;--pad:48px;--gap:22px;--card-pad:28px}
+
+/* ===== LAYOUT BASE (Flexbox, responsive) ===== */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7}
+.encabezado{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:48px var(--pad)}
+.encabezado>*{position:relative;z-index:1}
+.encabezado-texto{display:flex;flex-direction:column;gap:6px}
+.kanji{position:absolute!important;z-index:0!important;right:var(--pad);top:50%;transform:translateY(-50%);font-family:var(--font-head);font-size:clamp(120px,24vw,260px);line-height:1;opacity:.14;pointer-events:none;user-select:none}
+.etiqueta{font-family:var(--font-jp);font-size:14px;letter-spacing:.25em;color:var(--muted)}
+h1{margin:0;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(36px,7vw,72px);line-height:1.15}
+h2{margin:0;display:flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(18px,3vw,22px)}
+h2 .jp{font-family:var(--font-jp);font-size:1.5em;line-height:1;color:var(--accent)}
+.volver{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:14px;transition:.25s}
+.volver:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text)}
+.contenedor{display:flex;flex-wrap:wrap;gap:var(--gap);width:100%;max-width:1100px;margin:0 auto;padding:0 var(--pad) 72px;flex:1}
+.seccion{display:flex;flex-direction:column;gap:22px;flex:1 1 100%;padding:var(--card-pad);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card)}
+.caja-enlaces{display:flex;flex-wrap:wrap;gap:12px}
+.enlace{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:15px;transition:.25s}
+.enlace:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text);transform:translateY(-2px)}
+.reto .enlace{flex:1 1 180px;flex-direction:column;align-items:flex-start;gap:2px}
+.reto .enlace small{font-family:var(--font-jp);font-size:11px;letter-spacing:.15em;opacity:.65}
+.pie{padding:28px var(--pad);text-align:center;font-family:var(--font-jp);font-size:13px;letter-spacing:.2em;color:var(--muted)}
+@media(min-width:901px){.ejercicio{flex:1 1 30%}.reto{flex:1 1 60%}}
+@media(max-width:900px){:root{--pad:24px}.encabezado{padding-top:32px;padding-bottom:32px}}
+@media(max-width:600px){:root{--pad:16px;--card-pad:20px}.encabezado{flex-direction:column;align-items:flex-start}.caja-enlaces{flex-direction:column}.enlace{width:100%}.contenedor{gap:16px}}
+
+/* 富士 Fuji: cielo del amanecer, monte Fuji y sol rojo con CSS puro */
+body{background:linear-gradient(180deg,#d9e6f7 0,#eef3fb 320px,#fde9e6 100%) fixed}
+.encabezado{min-height:240px;padding-bottom:96px;align-content:center;justify-content:flex-start;gap:24px}
+.encabezado::before{content:"";position:absolute;width:90px;height:90px;border-radius:50%;background:var(--accent-sol,#e0432b);right:34%;top:28px;opacity:.9;z-index:0}
+.encabezado::after{content:"";position:absolute;right:8%;bottom:0;width:380px;height:160px;background:linear-gradient(180deg,#fff 0 30%,var(--accent) 30% 100%);clip-path:polygon(0 100%,36% 0,64% 0,100% 100%);z-index:0}
+.kanji{display:none}
+h1{color:#1f2d55}
+.seccion{box-shadow:0 14px 30px -22px #1f2d55}
+h2 .jp{background:var(--accent);color:#fff;border-radius:10px;padding:4px 10px;font-size:1.1em}
+.enlace{background:#fff}
+.enlace::before{content:"▲";font-size:10px;color:var(--accent)}
+.enlace:hover::before{color:#fff}
+@media(max-width:600px){.encabezado::after{width:240px;height:110px;right:0}.encabezado::before{width:60px;height:60px;right:50%}}

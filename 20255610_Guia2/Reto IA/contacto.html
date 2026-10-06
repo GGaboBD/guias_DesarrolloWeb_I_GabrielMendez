@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta a Sushi Itto El Salvador: reservas, catering, eventos privados y atención al cliente en San Salvador. Teléfono 2243-1166." />
+  <meta property="og:title" content="Contacto — Sushi Itto El Salvador" />
+  <meta property="og:description" content="Escríbenos o llámanos para reservas, cotizaciones y eventos. Seis boutiques gastronómicas en El Salvador." />
+  <meta property="og:type" content="website" />
+  <title>Contacto — Sushi Itto El Salvador</title>
+
+  <!-- Sustitutos: Cormorant Garamond (TT Ramillas) + DM Sans (Satoshi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Composición específica de la página, solo con tokens del sistema */
+    .page-hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 62svh;
+      padding-top: var(--nav-h);
+      background: var(--color-midnight-roast);
+      color: var(--color-parchment);
+      overflow: hidden;
+    }
+    .page-hero__bg { position: absolute; inset: 0; }
+    .page-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+    .page-hero__overlay { position: absolute; inset: 0; background: rgba(41, 38, 34, 0.78); }
+    .page-hero__inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: var(--page-max-width);
+      margin-inline: auto;
+      padding: var(--spacing-92) var(--pad-x) var(--spacing-42);
+    }
+    .page-hero__meta-row { display: flex; justify-content: space-between; gap: var(--spacing-16); margin-bottom: var(--spacing-24); }
+    .page-hero__title {
+      font-family: var(--font-tt-ramillas-variable);
+      font-weight: var(--font-weight-light);
+      font-size: clamp(44px, 9vw, var(--text-display));
+      line-height: var(--leading-display);
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--color-parchment);
+      animation: fadeUp 0.8s var(--ease) both;
+    }
+    .page-hero__lead {
+      margin-top: var(--spacing-32);
+      max-width: 520px;
+      font-size: var(--text-body);
+      line-height: var(--leading-body);
+      letter-spacing: var(--tracking-body);
+      color: var(--color-parchment);
+      animation: fadeUp 0.8s var(--ease) 0.15s both;
+    }
+
+    /* Layout principal: formulario + info */
+    .contact { padding-block: var(--section-gap); background: var(--color-parchment); }
+    .contact__container {
+      max-width: var(--page-max-width);
+      margin-inline: auto;
+      padding-inline: var(--pad-x);
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: var(--spacing-92);
+      align-items: start;
+    }
+
+    /* Formulario */
+    .form { display: flex; flex-direction: column; gap: var(--spacing-24); }
+    .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-20); }
+    .form__field { display: flex; flex-direction: column; gap: var(--spacing-8); }
+    .form__label {
+      font-size: 12px;
+      line-height: 1.3;
+      letter-spacing: -0.144px;
+      text-transform: uppercase;
+      color: var(--color-espresso);
+    }
+    .form__label span { color: var(--color-saffron-glow); }
+
+    .form__input,
+    .form__select,
+    .form__textarea {
+      width: 100%;
+      padding: var(--spacing-16) var(--spacing-16);
+      background: transparent;
+      border: 1px solid var(--color-warm-stone);
+      border-radius: var(--radius-inputs);
+      font-family: var(--font-satoshi);
+      font-weight: var(--font-weight-medium);
+      font-size: 14px;
+      line-height: 1.3;
+      letter-spacing: -0.14px;
+      color: var(--color-onyx-warm);
+      transition-property: border-color, background-color;
+      transition-duration: var(--dur);
+      transition-timing-function: var(--ease);
+    }
+    .form__input::placeholder,
+    .form__textarea::placeholder { color: var(--color-walnut); }
+    .form__input:hover,
+    .form__select:hover,
+    .form__textarea:hover { border-color: var(--color-espresso); }
+    .form__input:focus,
+    .form__select:focus,
+    .form__textarea:focus {
+      outline: none;
+      border-color: var(--color-onyx-warm);
+      background-color: var(--color-linen);
+    }
+    .form__select {
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      padding-right: var(--spacing-42);
+      background-image:
+        linear-gradient(45deg, transparent 50%, var(--color-onyx-warm) 50%),
+        linear-gradient(135deg, var(--color-onyx-warm) 50%, transparent 50%);
+      background-position: calc(100% - 22px) 55%, calc(100% - 16px) 55%;
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
+    }
+    .form__textarea { min-height: 160px; resize: vertical; line-height: 1.4; }
+
+    .form__hint {
+      font-size: 12px;
+      letter-spacing: -0.144px;
+      color: var(--color-walnut);
+    }
+
+    .form__consent { display: flex; align-items: flex-start; gap: var(--spacing-12); }
+    .form__check {
+      appearance: none;
+      -webkit-appearance: none;
+      flex-shrink: 0;
+      width: 18px; height: 18px;
+      margin-top: 1px;
+      border: 1px solid var(--color-onyx-warm);
+      border-radius: var(--radius-sm);
+      background: transparent;
+      cursor: pointer;
+      transition-property: background-color;
+      transition-duration: var(--dur);
+      transition-timing-function: var(--ease);
+    }
+    .form__check:checked {
+      background-color: var(--color-onyx-warm);
+      box-shadow: inset 0 0 0 3px var(--color-parchment);
+    }
+    .form__check:focus-visible { outline: 1px solid var(--color-saffron-glow); outline-offset: 3px; }
+    .form__consent-text {
+      font-size: var(--text-caption);
+      line-height: 1.4;
+      letter-spacing: var(--tracking-caption);
+      color: var(--color-espresso);
+    }
+    .form__consent-text a { text-decoration: underline; text-underline-offset: 3px; }
+
+    .form__actions { display: flex; align-items: center; gap: var(--spacing-20); flex-wrap: wrap; }
+    .form__status {
+      font-size: 13px;
+      letter-spacing: -0.143px;
+      text-transform: uppercase;
+      color: var(--color-saffron-glow);
+      min-height: 1em;
+    }
+
+    /* Panel de información */
+    .info { display: flex; flex-direction: column; border-top: 1px solid var(--color-warm-stone); }
+    .info__block {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-8);
+      padding: var(--spacing-28) 0;
+      border-bottom: 1px solid var(--color-warm-stone);
+    }
+    .info__title {
+      font-family: var(--font-tt-ramillas-variable);
+      font-weight: var(--font-weight-light);
+      font-size: 26px;
+      line-height: 1;
+      letter-spacing: -0.006em;
+      text-transform: uppercase;
+      color: var(--color-onyx-warm);
+    }
+    .info__text,
+    .info__link {
+      font-size: var(--text-body);
+      line-height: var(--leading-body);
+      letter-spacing: var(--tracking-body);
+      color: var(--color-espresso);
+    }
+    .info__link {
+      align-self: flex-start;
+      color: var(--color-onyx-warm);
+      transition-property: color;
+      transition-duration: var(--dur);
+      transition-timing-function: var(--ease);
+    }
+    .info__link:hover { color: var(--color-saffron-glow); }
+    .info__hours { display: flex; flex-direction: column; gap: var(--spacing-8); margin-top: var(--spacing-4); }
+    .info__hours .hours-row { border-bottom-color: var(--color-warm-stone); }
+    .info__hours .hours-day { color: var(--color-espresso); }
+    .info__hours .hours-time { color: var(--color-onyx-warm); }
+
+    /* Sucursales */
+    .locations { padding-block: var(--section-gap); background: var(--color-linen); border-top: 1px solid var(--color-warm-stone); border-bottom: 1px solid var(--color-warm-stone); }
+    .locations__container { max-width: var(--page-max-width); margin-inline: auto; padding-inline: var(--pad-x); }
+    .locations__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-20); }
+
+    @media (max-width: 1100px) {
+      .contact__container { gap: var(--spacing-42); }
+    }
+    @media (max-width: 960px) {
+      .contact__container { grid-template-columns: 1fr; }
+      .locations__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .form__row { grid-template-columns: 1fr; }
+      .locations__grid { grid-template-columns: 1fr; }
+      .page-hero__meta-row { flex-direction: column; gap: var(--spacing-4); }
+      .form__actions .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════ HEADER FLOTANTE ═══════════════ -->
+  <header class="header header--solid" id="header">
+    <div class="header__inner">
+
+      <a href="index.html" class="logo" aria-label="Sushi Itto El Salvador — Inicio">
+        <span class="logo__glyph" aria-hidden="true">寿</span>
+        <div class="logo__wordmark">
+          <span class="logo__name">Sushi Itto</span>
+          <span class="logo__location">San Salvador</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+          <li><a href="contacto.html" class="nav__link" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <span class="live-status" aria-live="polite">
+          <span class="live-status__dot" aria-hidden="true"></span>
+          Abierto ahora
+        </span>
+        <a href="tel:22431166" class="btn btn--outline">Pedir en Línea</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html" class="mobile-nav__link">Inicio</a></li>
+        <li><a href="servicios.html" class="mobile-nav__link">Servicios</a></li>
+        <li><a href="contacto.html" class="mobile-nav__link">Contacto</a></li>
+        <li><a href="tel:22431166" class="btn btn--outline mobile-cta">Pedir en Línea</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ═══════════════ HERO DE PÁGINA ═══════════════ -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="page-hero__bg" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=1600&q=80&auto=format&fit=crop"
+          alt=""
+          width="1600" height="900" loading="eager"
+        />
+        <div class="page-hero__overlay"></div>
+      </div>
+
+      <div class="page-hero__inner">
+        <div class="page-hero__meta-row">
+          <span class="hero__meta">Reservas &amp; Atención</span>
+          <span class="hero__meta">Sirviendo en San Salvador</span>
+        </div>
+        <h1 class="page-hero__title" id="page-title">Hablemos</h1>
+        <p class="page-hero__lead">
+          Reservas, cotizaciones, eventos privados o simplemente una duda sobre
+          la carta. Cuéntanos qué necesitas y nuestro equipo te responde en
+          menos de 24 horas.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ FORMULARIO + INFORMACIÓN ═══════════════ -->
+    <section class="contact" id="formulario" aria-labelledby="contact-title">
+      <div class="contact__container">
+
+        <!-- Formulario -->
+        <div class="contact__form-col">
+          <header class="section-header">
+            <p class="section-header__eyebrow">
+              <span class="eyebrow__line" aria-hidden="true"></span>
+              Escríbenos
+            </p>
+            <h2 class="section-header__title" id="contact-title">
+              Envíanos<br />un mensaje
+            </h2>
+            <p class="section-header__subtitle">
+              Los campos marcados con asterisco son obligatorios.
+            </p>
+          </header>
+
+          <form class="form" id="contactForm" action="#" method="post" novalidate>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="text" id="nombre" name="nombre" placeholder="Ej. María Hernández" autocomplete="name" required />
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="telefono">Teléfono</label>
+                <input class="form__input" type="tel" id="telefono" name="telefono" placeholder="7000-0000" autocomplete="tel" inputmode="tel" />
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="motivo">Motivo de contacto <span aria-hidden="true">*</span></label>
+                <select class="form__select" id="motivo" name="motivo" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="reserva">Reservar mesa</option>
+                  <option value="omakase">Omakase del Chef</option>
+                  <option value="delivery">Delivery VIP</option>
+                  <option value="catering">Catering corporativo</option>
+                  <option value="evento">Evento privado</option>
+                  <option value="taller">Taller de sushi</option>
+                  <option value="regalo">Tarjetas de regalo</option>
+                  <option value="otro">Otro / comentarios</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="sucursal">Sucursal de preferencia</label>
+                <select class="form__select" id="sucursal" name="sucursal">
+                  <option value="">Sin preferencia</option>
+                  <option value="san-benito">San Benito</option>
+                  <option value="santa-elena">Santa Elena</option>
+                  <option value="multiplaza">Multiplaza</option>
+                </select>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="fecha">Fecha tentativa</label>
+                <input class="form__input" type="date" id="fecha" name="fecha" />
+              </div>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+              <textarea class="form__textarea" id="mensaje" name="mensaje" placeholder="Cuéntanos número de personas, ocasión y cualquier detalle que debamos conocer…" required></textarea>
+              <span class="form__hint">Si es un evento, indícanos el número aproximado de comensales.</span>
+            </div>
+
+            <div class="form__consent">
+              <input class="form__check" type="checkbox" id="consent" name="consent" required />
+              <label class="form__consent-text" for="consent">
+                Acepto que Sushi Itto El Salvador use mis datos para responder a
+                esta solicitud, según el <a href="#">Aviso de Privacidad</a>.
+              </label>
+            </div>
+
+            <div class="form__actions">
+              <button type="submit" class="btn btn--outline btn--large">
+                Enviar mensaje
+                <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <aside class="contact__info-col" aria-label="Información de contacto">
+          <header class="section-header">
+            <p class="section-header__eyebrow">
+              <span class="eyebrow__line" aria-hidden="true"></span>
+              Contacto directo
+            </p>
+          </header>
+
+          <div class="info">
+
+            <div class="info__block">
+              <h3 class="info__title">Teléfono</h3>
+              <a href="tel:22431166" class="info__link">2243-1166</a>
+              <p class="info__text">Domicilio y reservas.</p>
+            </div>
+
+            <div class="info__block">
+              <h3 class="info__title">WhatsApp</h3>
+              <a href="https://wa.me/50322431166" target="_blank" rel="noopener noreferrer" class="info__link">+503 2243-1166</a>
+              <p class="info__text">Respuesta rápida en horario de atención.</p>
+            </div>
+
+            <div class="info__block">
+              <h3 class="info__title">Correo de atención</h3>
+              <a href="mailto:contacto@sushiitto.com.sv" class="info__link">contacto@sushiitto.com.sv</a>
+              <p class="info__text">Cotizaciones, eventos y facturación.</p>
+            </div>
+
+            <div class="info__block">
+              <h3 class="info__title">Casa matriz</h3>
+              <address class="info__text">
+                Blvd. El Hipódromo No. 40,<br />
+                Col. San Benito, San Salvador,<br />
+                El Salvador
+              </address>
+              <a href="https://maps.google.com/?q=Sushi+Itto+San+Benito+San+Salvador" target="_blank" rel="noopener noreferrer" class="info__link">Ver en Google Maps →</a>
+            </div>
+
+            <div class="info__block">
+              <h3 class="info__title">Horarios</h3>
+              <div class="info__hours">
+                <div class="hours-row"><span class="hours-day">Lunes – Jueves</span><span class="hours-time">11:00 – 22:00</span></div>
+                <div class="hours-row"><span class="hours-day">Viernes – Sábado</span><span class="hours-time">11:00 – 23:00</span></div>
+                <div class="hours-row"><span class="hours-day">Domingo</span><span class="hours-time">11:00 – 22:30</span></div>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ SUCURSALES ═══════════════ -->
+    <section class="locations" id="sucursales" aria-labelledby="locations-title">
+      <div class="locations__container">
+
+        <header class="section-header">
+          <p class="section-header__eyebrow">
+            <span class="eyebrow__line" aria-hidden="true"></span>
+            Visítanos
+          </p>
+          <h2 class="section-header__title" id="locations-title">
+            Nuestras<br />boutiques
+          </h2>
+          <p class="section-header__subtitle">
+            Tres ubicaciones para reservar tu mesa en el área metropolitana de San Salvador.
+          </p>
+        </header>
+
+        <div class="locations__grid">
+
+          <article class="branch-card">
+            <div class="branch-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=600&q=80&auto=format&fit=crop"
+                alt="Interior del restaurante Sushi Itto San Benito"
+                class="branch-card__img"
+                width="600" height="375" loading="lazy"
+              />
+              <div class="branch-card__media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="branch-card__body">
+              <div class="branch-card__header">
+                <h3 class="branch-card__name">San Benito</h3>
+                <span class="branch-card__status">● Abierto</span>
+              </div>
+              <address class="branch-card__address">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                Blvd. El Hipódromo No.40, Col. San Benito
+              </address>
+              <p class="branch-card__hours">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Lun–Jue 11:00–22:00 &nbsp;|&nbsp; Vie–Dom 11:00–23:00
+              </p>
+              <a href="https://maps.google.com/?q=Sushi+Itto+San+Benito+San+Salvador" target="_blank" rel="noopener noreferrer" class="branch-card__map-link">
+                Ver en Google Maps
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="branch-card">
+            <div class="branch-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&auto=format&fit=crop"
+                alt="Ambiente del restaurante Sushi Itto Santa Elena"
+                class="branch-card__img"
+                width="600" height="375" loading="lazy"
+              />
+              <div class="branch-card__media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="branch-card__body">
+              <div class="branch-card__header">
+                <h3 class="branch-card__name">Santa Elena</h3>
+                <span class="branch-card__status">● Abierto</span>
+              </div>
+              <address class="branch-card__address">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                Plaza Santa Elena, Antiguo Cuscatlán, La Libertad
+              </address>
+              <p class="branch-card__hours">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Lun–Jue 11:00–22:00 &nbsp;|&nbsp; Vie–Dom 11:00–23:00
+              </p>
+              <a href="https://maps.google.com/?q=Sushi+Itto+Santa+Elena+Antiguo+Cuscatlan" target="_blank" rel="noopener noreferrer" class="branch-card__map-link">
+                Ver en Google Maps
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="branch-card">
+            <div class="branch-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80&auto=format&fit=crop"
+                alt="Boutique gastronómica Sushi Itto Multiplaza"
+                class="branch-card__img"
+                width="600" height="375" loading="lazy"
+              />
+              <div class="branch-card__media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="branch-card__body">
+              <div class="branch-card__header">
+                <h3 class="branch-card__name">Multiplaza</h3>
+                <span class="branch-card__status">● Abierto</span>
+              </div>
+              <address class="branch-card__address">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                C.C. Multiplaza, Las Terrazas P.B., San Salvador
+              </address>
+              <p class="branch-card__hours">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Lun–Jue 11:00–22:00 &nbsp;|&nbsp; Vie–Dom 11:00–23:00
+              </p>
+              <a href="https://maps.google.com/?q=Sushi+Itto+Multiplaza+El+Salvador" target="_blank" rel="noopener noreferrer" class="branch-card__map-link">
+                Ver en Google Maps
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer__container">
+
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="Sushi Itto El Salvador">
+            <span class="logo__glyph" aria-hidden="true">寿</span>
+            <div class="logo__wordmark">
+              <span class="logo__name">Sushi Itto</span>
+              <span class="logo__location">San Salvador</span>
+            </div>
+          </a>
+          <p class="footer__tagline">
+            Desde 1999, fusionando la tradición japonesa<br />
+            con la pasión culinaria salvadoreña.
+          </p>
+          <div class="footer__socials">
+            <a href="https://instagram.com/sushiittosv" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram @sushiittosv">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://facebook.com/sushiittosv" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook @sushiittosv">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@sushiittosv" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok @sushiittosv">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9a8.23 8.23 0 004.81 1.54V7.07a4.84 4.84 0 01-1.04-.38z"/></svg>
+            </a>
+            <a href="https://wa.me/50322431166" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp Sushi Itto">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.109 1.503 5.857L.057 24l6.305-1.654A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.887a9.877 9.877 0 01-5.031-1.378l-.361-.214-3.741.981.999-3.648-.235-.374A9.861 9.861 0 012.113 12C2.113 6.53 6.529 2.113 12 2.113c5.471 0 9.887 4.416 9.887 9.887 0 5.471-4.416 9.887-9.887 9.887z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navegación del footer">
+          <h4 class="footer__nav-title">Menú</h4>
+          <ul class="footer__nav-list">
+            <li><a href="index.html" class="footer__link">Inicio</a></li>
+            <li><a href="servicios.html" class="footer__link">Servicios</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+            <li><a href="index.html#delivery" class="footer__link">Delivery VIP</a></li>
+            <li><a href="index.html#about" class="footer__link">Nuestra Historia</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__hours">
+          <h4 class="footer__nav-title">Horarios</h4>
+          <div class="hours-row"><span class="hours-day">Lunes – Jueves</span><span class="hours-time">11:00 – 22:00</span></div>
+          <div class="hours-row"><span class="hours-day">Viernes – Sábado</span><span class="hours-time">11:00 – 23:00</span></div>
+          <div class="hours-row"><span class="hours-day">Domingo</span><span class="hours-time">11:00 – 22:30</span></div>
+          <a href="tel:22431166" class="footer__phone">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.4 10.58 19.79 19.79 0 01.34 1.94 2 2 0 012.32 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.42 7.79a16 16 0 006 6l1.15-1.15a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            2243-1166 · Domicilio y reservas
+          </a>
+        </div>
+
+        <div class="footer__legal-col">
+          <h4 class="footer__nav-title">Legal</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#" class="footer__link">Aviso de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="yr"></span> Sushi Itto El Salvador. Todos los derechos reservados.</p>
+        <p class="footer__made">Gastronomía japonesa de autor en El Salvador desde 1999</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    /* Año */
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* Menú móvil */
+    var hamburger = document.getElementById('hamburger');
+    var mobileNav = document.getElementById('mobileNav');
+    function closeMobile() {
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      mobileNav.classList.remove('mobile-nav--open');
+      hamburger.classList.remove('hamburger--open');
+      document.body.classList.remove('no-scroll');
+    }
+    hamburger.addEventListener('click', function () {
+      var open = hamburger.getAttribute('aria-expanded') === 'true';
+      if (open) { closeMobile(); return; }
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      mobileNav.classList.add('mobile-nav--open');
+      hamburger.classList.add('hamburger--open');
+      document.body.classList.add('no-scroll');
+    });
+    document.querySelectorAll('.mobile-nav__link, .mobile-cta').forEach(function (el) {
+      el.addEventListener('click', closeMobile);
+    });
+
+    /* Validación y feedback del formulario */
+    var form = document.getElementById('contactForm');
+    var status = document.getElementById('formStatus');
+    var fechaInput = document.getElementById('fecha');
+    fechaInput.min = new Date().toISOString().split('T')[0];
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        status.textContent = 'Revisa los campos obligatorios.';
+        form.reportValidity();
+        return;
+      }
+      status.textContent = '✓ Mensaje enviado. Te responderemos pronto.';
+      form.reset();
+      setTimeout(function () { status.textContent = ''; }, 5000);
+    });
+
+    /* Fade-in al hacer scroll */
+    var fadeEls = document.querySelectorAll('.info__block, .branch-card, .form__field');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -72px 0px', threshold: 0.08 });
+    fadeEls.forEach(function (el) {
+      el.classList.add('fade-up');
+      io.observe(el);
+    });
+  </script>
+
+</body>
+</html>

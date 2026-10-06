@@ -1,0 +1,42 @@
+/* estilos3.css — Guía 3: 禅 Zen */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap');
+
+:root{--accent:#7fae5a;--bg:#f4f1ea;--surface:transparent;--text:#2b2b2b;--muted:#8a867c;--line:#d8d3c6;--accent-text:#1d2b14;--font:'Zen Kaku Gothic New',sans-serif;--font-head:'Zen Old Mincho',serif;--font-jp:'Zen Old Mincho',serif;--w-head:400;--r-card:0;--r-btn:999px;--pad:56px;--gap:8px;--card-pad:36px 0}
+
+/* ===== LAYOUT BASE (Flexbox, responsive) ===== */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7}
+.encabezado{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:48px var(--pad)}
+.encabezado>*{position:relative;z-index:1}
+.encabezado-texto{display:flex;flex-direction:column;gap:6px}
+.kanji{position:absolute!important;z-index:0!important;right:var(--pad);top:50%;transform:translateY(-50%);font-family:var(--font-head);font-size:clamp(120px,24vw,260px);line-height:1;opacity:.14;pointer-events:none;user-select:none}
+.etiqueta{font-family:var(--font-jp);font-size:14px;letter-spacing:.25em;color:var(--muted)}
+h1{margin:0;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(36px,7vw,72px);line-height:1.15}
+h2{margin:0;display:flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(18px,3vw,22px)}
+h2 .jp{font-family:var(--font-jp);font-size:1.5em;line-height:1;color:var(--accent)}
+.volver{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:14px;transition:.25s}
+.volver:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text)}
+.contenedor{display:flex;flex-wrap:wrap;gap:var(--gap);width:100%;max-width:1100px;margin:0 auto;padding:0 var(--pad) 72px;flex:1}
+.seccion{display:flex;flex-direction:column;gap:22px;flex:1 1 100%;padding:var(--card-pad);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card)}
+.caja-enlaces{display:flex;flex-wrap:wrap;gap:12px}
+.enlace{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:15px;transition:.25s}
+.enlace:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text);transform:translateY(-2px)}
+.reto .enlace{flex:1 1 180px;flex-direction:column;align-items:flex-start;gap:2px}
+.reto .enlace small{font-family:var(--font-jp);font-size:11px;letter-spacing:.15em;opacity:.65}
+.pie{padding:28px var(--pad);text-align:center;font-family:var(--font-jp);font-size:13px;letter-spacing:.2em;color:var(--muted)}
+@media(min-width:901px){.ejercicio{flex:1 1 30%}.reto{flex:1 1 60%}}
+@media(max-width:900px){:root{--pad:24px}.encabezado{padding-top:32px;padding-bottom:32px}}
+@media(max-width:600px){:root{--pad:16px;--card-pad:20px}.encabezado{flex-direction:column;align-items:flex-start}.caja-enlaces{flex-direction:column}.enlace{width:100%}.contenedor{gap:16px}}
+
+/* 禅 Zen: mucho espacio en blanco, círculo enso, líneas finas */
+.encabezado{padding-top:72px;padding-bottom:56px}
+.encabezado::after{content:"";position:absolute;right:calc(var(--pad) + 10px);top:50%;width:150px;height:150px;margin-top:-75px;border-radius:50%;border:12px solid #2b2b2b;border-right-color:transparent;transform:rotate(-30deg);opacity:.85;z-index:0}
+.kanji{display:none}
+h1{font-weight:400;letter-spacing:.2em}
+.seccion{border:0;border-top:1px solid var(--line)}
+h2{letter-spacing:.12em}
+h2 .jp{color:var(--accent);font-size:1.7em;text-shadow:0 0 0 #000}
+.enlace{background:transparent;border-color:var(--text);padding:10px 24px}
+.enlace::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.enlace:hover::before{background:#1d2b14}
+@media(max-width:600px){.encabezado::after{width:90px;height:90px;margin-top:-45px;border-width:8px;opacity:.5}}

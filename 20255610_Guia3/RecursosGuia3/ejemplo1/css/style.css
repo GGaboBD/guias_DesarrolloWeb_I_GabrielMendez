@@ -1,0 +1,385 @@
+:root {
+  --color-texto: #342e29;
+  --color-fondo: #f5efe6;
+  --color-principal: #293e36;
+  --color-acento: #93472f;
+  --color-superficie: #ffffff;
+  --color-contraste: #ead1ad;
+  --color-borde: #ded3c4;
+  --color-fondo-secundario: #eadfce;
+  --color-capa-inicial: rgba(25, 35, 29, 0.85);
+  --color-capa-final: rgba(25, 35, 29, 0.65);
+  --color-sombra: rgba(52, 46, 41, 0.10);
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2, h3 {
+    color: var(--color-principal);
+}
+
+a {
+    color: var(--color-acento);
+}
+
+a:hover, 
+a:focus-visible {
+    color: var(--color-principal);
+}
+
+.encabezado-principal {
+    color: var(--color-superficie);
+    background-color: var(--color-principal);
+}
+
+.marca {
+    color: var(--color-superficie);
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    padding: 1rem 0;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.menu a {
+    color: var(--color-superficie);
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    color: var(--color-contraste);
+}
+
+.presentacion {
+    padding: 4rem 0;
+    color: var(--color-superficie);
+    background-color: var(--color-principal);
+    background-image: 
+    linear-gradient(
+        to right,
+        var(--color-capa-inicial),
+        var(--color-capa-final)
+    ),
+    url(../images/gran-muralla-china.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.presentacion h1 {
+    max-width: 760px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.presentacion p {
+    max-width: 640px;
+}
+
+.sobretitulo {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-acento);
+} 
+
+.presentacion .sobretitulo {
+    color: var(--color-contraste);
+}
+
+.boton-principal {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    color: var(--color-superficie);
+    background-color: var(--color-acento);
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+.boton-principal:hover,
+.boton-principal:focus-visible {
+    color: var(--color-principal);
+    background-color: var(--color-contraste);
+}
+
+.seccion-maravillas {
+    padding: 3rem 0;
+}
+
+.titulo-seccion {
+    max-width: 680px;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    font-size: 2rem;
+}
+
+.maravillas {
+    display: flex;
+}
+
+/*
+a) Busco formar una sola linea para todos los elementos, sin importar el tamaño de la ventana
+
+b) Se reducen las 7 al tamaño minimo para que puedan caber las 7
+
+c) No, sinceramente, se ve muy aplastado y forzado, con tamaños muy incomodos de ver o leer
+*/
+
+.maravillas {
+    flex-wrap: wrap;
+}
+
+/* Las imagenes y todos los elementos regresaron a su tamaño inicial, lo que cambio es que ahora, los elementos estan separados por diferentes lineas*/
+
+.maravilla {
+    flex: 1 1 300px;
+}
+
+.maravillas {
+    gap: 1.5rem;
+}
+
+/*
+
+gap: crea una separacion uniforme entre los elementos flexibles sin agregar espacio en los bordes del contenedor
+
+padding: Es ya el relleno interior, que se aplica a los bordes de cada tarjeta, separando sus limites externos de su contenido interior
+
+*/
+
+/*
+20.
+
+a) Crece más porque al ser la única tarjeta en esa fila absorbe todo el espacio libre disponible en el eje principal. 
+
+b) El valor que permite ese crecimiento es flex-grow con valor 1 dentro de flex: 1 1 300px. 
+
+c) No resulta visualmente conveniente porque rompe la armonía y simetría del diseño de la cuadrícula. 
+*/
+
+.maravilla {
+    max-width: 360px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px var(--color-sombra);
+    overflow: hidden;
+}
+
+.maravillas {
+    justify-content: center;
+}
+
+.maravilla img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+/*
+23.
+
+a) ASJJASJHSAJ nop, se ve toda aplastada
+
+b) Las horizontales sufren una deformacion pero menor, pues lo unico que varia es su altura, pero ya era baja la altura, entonces no sufrieron cambios practicamente, en cambio la vertical si que lo sufrio porque su altura era muchisimo mas grande que 220px
+
+
+25. Lo que se pierde es quiza la imagen deseada a mostrar, pues cover busca mantener la imagen dentro del bloque sin deformarla, sin embargo, lo que no puede hacer es moverla a voluntad, por lo que pone, al menos en la de Petra, la parte superior de la imagen, cuando el foco deberia ser la parte baja de esta misma
+*/
+
+.maravilla-contenido {
+    padding: 1.25rem;
+}
+
+.maravilla-contenido .ubicacion {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--color-acento);
+}
+
+.maravilla-contenido h3 {
+    font-size: 1.35rem;
+    margin: 0.25rem 0 0.75rem;
+}
+
+.maravilla-contenido a{
+    font-weight: bold;
+}
+
+.maravilla{
+    display: flex;
+    flex-direction: column;
+}
+
+.maravilla-contenido {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.maravilla-contenido a{
+    margin-top: auto;
+    align-items: flex-start;
+}
+
+/*
+Absorbe todo el espacio vertical disponible 
+*/
+
+/*
+27.
+a) Se desplazo hacia la esquina inferior derecha
+b) Desde su posicion original en el flujo normal de la pagina web
+c) Nop, pues en el posicionamiento relativo, las tarjeta puede moverse pero su espacio original siempre se mantiene como si aun siguiera ahi
+d) Sip, al moverse de su posicion original, puede ubicarse por encima o por debajo de los elementos vecinos, dependiendo tambien del valor ingresado en z-index, pues si fuera negativo su valor, quedaria por debajo de los elementos vecinos
+*/
+
+/*
+28. 
+a) La tarjeta se desplaza hacia la izqueirda
+b) Porque los valores ingresados significan la distancia a mover desde el borde original, asi que aqui, hay una distancia de 50px desde borde del elemento movido hasta el borde original
+*/
+
+/*
+29.
+a) Las tarjetas vecinas ocuparon el espacio de la tarjeta con propiedad position:absolute
+b) Nop, ya no, eso era solo propiedad de relative
+c) De los bordes de la pagina web
+*/
+
+/*
+30. 
+a) De los bordes de .maravillas
+b) Se modifico porque absolute se posiciona en su ancestro mas cercano siempre y cuando no sea position:static (la posicion por defecto de los elementos) al ponerle position:relative a .maravillas, hago que su posicion deje de ser static, y hago a su vez, que absolute se posicione cerca de el sin tener que desplazar al contenedor
+*/
+
+/*
+31.
+a) position:relative
+b) position:absolute
+c) Por medio de la posicion de su antecesor mas cercano, siempre y cuando este cuente con un position distinto de static
+*/
+
+.maravilla-imagen {
+    position: relative;
+}
+
+.continente {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    padding: 0.25rem 0.75rem;
+    color: var(--color-superficie);
+    background-color: var(--color-acento);
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.encabezado-principal {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/*
+35. 
+a) Nop, al desplazar la pagina hacia abajo, el encabezado sube con el resto del contenido
+b) Falta definir una coordenada de desplazamiento
+*/
+
+/*
+37.
+Esto es debido a que, las imagenes, tenian un valor superior, lo que hacia que el encabezado pasara por debajo de las imagenes, lo que no se veia estetico, pues es necesario que el encabezado pase siempre por arriba de todo
+*/
+
+.volver-arriba {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    color: var(--color-superficie);
+    background-color: var(--color-acento);
+    border: 2px solid var(--color-superficie);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/*
+38.
+a) El encabezado, ya que se comporta como relativo
+b) El boton de volver al incio, ya que sale completamente del flujo del documento y se ancla en el viewport
+*/
+
+
+.seccion-historia {
+    padding: 3rem;
+    background-color: var(--color-fondo-secundario);
+}
+
+.historia-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.historia-contenido > * {
+    flex: 1 1 300px;
+}
+
+.pie-pagina {
+    padding: 2rem 0 5rem;
+    color: var(--color-superficie);
+    background-color: var(--color-principal);
+}

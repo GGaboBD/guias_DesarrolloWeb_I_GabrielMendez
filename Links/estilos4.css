@@ -1,0 +1,41 @@
+/* estilos4.css — Guía 4: 鳥居 Torii */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Yuji+Syuku&display=swap');
+
+:root{--accent:#e0432b;--bg:#130808;--surface:rgba(255,255,255,.03);--text:#f6e9dc;--muted:#b49a8a;--line:rgba(201,162,74,.4);--accent-text:#fff;--font:'Shippori Mincho',serif;--font-head:'Yuji Syuku',serif;--font-jp:'Shippori Mincho',serif;--w-head:400;--r-card:2px;--r-btn:2px;--pad:48px;--gap:22px;--card-pad:30px}
+
+/* ===== LAYOUT BASE (Flexbox, responsive) ===== */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7}
+.encabezado{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:48px var(--pad)}
+.encabezado>*{position:relative;z-index:1}
+.encabezado-texto{display:flex;flex-direction:column;gap:6px}
+.kanji{position:absolute!important;z-index:0!important;right:var(--pad);top:50%;transform:translateY(-50%);font-family:var(--font-head);font-size:clamp(120px,24vw,260px);line-height:1;opacity:.14;pointer-events:none;user-select:none}
+.etiqueta{font-family:var(--font-jp);font-size:14px;letter-spacing:.25em;color:var(--muted)}
+h1{margin:0;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(36px,7vw,72px);line-height:1.15}
+h2{margin:0;display:flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(18px,3vw,22px)}
+h2 .jp{font-family:var(--font-jp);font-size:1.5em;line-height:1;color:var(--accent)}
+.volver{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:14px;transition:.25s}
+.volver:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text)}
+.contenedor{display:flex;flex-wrap:wrap;gap:var(--gap);width:100%;max-width:1100px;margin:0 auto;padding:0 var(--pad) 72px;flex:1}
+.seccion{display:flex;flex-direction:column;gap:22px;flex:1 1 100%;padding:var(--card-pad);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card)}
+.caja-enlaces{display:flex;flex-wrap:wrap;gap:12px}
+.enlace{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:15px;transition:.25s}
+.enlace:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text);transform:translateY(-2px)}
+.reto .enlace{flex:1 1 180px;flex-direction:column;align-items:flex-start;gap:2px}
+.reto .enlace small{font-family:var(--font-jp);font-size:11px;letter-spacing:.15em;opacity:.65}
+.pie{padding:28px var(--pad);text-align:center;font-family:var(--font-jp);font-size:13px;letter-spacing:.2em;color:var(--muted)}
+@media(min-width:901px){.ejercicio{flex:1 1 30%}.reto{flex:1 1 60%}}
+@media(max-width:900px){:root{--pad:24px}.encabezado{padding-top:32px;padding-bottom:32px}}
+@media(max-width:600px){:root{--pad:16px;--card-pad:20px}.encabezado{flex-direction:column;align-items:flex-start}.caja-enlaces{flex-direction:column}.enlace{width:100%}.contenedor{gap:16px}}
+
+/* 鳥居 Torii: noche, pórtico bermellón, filo dorado */
+body{background:radial-gradient(ellipse at 50% 0,#3a1010,#130808 60%)}
+.encabezado{padding-top:96px}
+.encabezado::before{content:"";position:absolute;top:22px;left:0;right:0;height:18px;background:var(--accent);clip-path:polygon(0 0,100% 0,97% 100%,3% 100%);z-index:0}
+.encabezado::after{content:"";position:absolute;top:54px;left:6%;right:6%;height:10px;background:var(--accent);opacity:.9;z-index:0}
+.kanji{color:var(--accent);opacity:.2}
+h1{color:#f6e9dc;letter-spacing:.08em}
+.seccion{border-left:4px solid var(--accent)}
+h2 .jp{border:1px solid var(--accent);padding:2px 8px;font-size:1.2em}
+.enlace{background:rgba(224,67,43,.08);border-color:rgba(201,162,74,.4)}
+.enlace::before{content:"⛩";font-size:14px}

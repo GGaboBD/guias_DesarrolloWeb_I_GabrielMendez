@@ -1,0 +1,39 @@
+/* estilos6.css — Guía 6: 竹 Take */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Hina+Mincho&display=swap');
+
+:root{--accent:#7fae5a;--bg:#eef2e3;--surface:rgba(255,255,255,.65);--text:#23331f;--muted:#6f8266;--line:#c4d3b4;--accent-text:#1d2b14;--font:'Zen Maru Gothic',sans-serif;--font-head:'Hina Mincho',serif;--font-jp:'Hina Mincho',serif;--w-head:400;--r-card:14px;--r-btn:999px;--pad:56px;--gap:22px;--card-pad:28px}
+
+/* ===== LAYOUT BASE (Flexbox, responsive) ===== */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7}
+.encabezado{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:48px var(--pad)}
+.encabezado>*{position:relative;z-index:1}
+.encabezado-texto{display:flex;flex-direction:column;gap:6px}
+.kanji{position:absolute!important;z-index:0!important;right:var(--pad);top:50%;transform:translateY(-50%);font-family:var(--font-head);font-size:clamp(120px,24vw,260px);line-height:1;opacity:.14;pointer-events:none;user-select:none}
+.etiqueta{font-family:var(--font-jp);font-size:14px;letter-spacing:.25em;color:var(--muted)}
+h1{margin:0;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(36px,7vw,72px);line-height:1.15}
+h2{margin:0;display:flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(18px,3vw,22px)}
+h2 .jp{font-family:var(--font-jp);font-size:1.5em;line-height:1;color:var(--accent)}
+.volver{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:14px;transition:.25s}
+.volver:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text)}
+.contenedor{display:flex;flex-wrap:wrap;gap:var(--gap);width:100%;max-width:1100px;margin:0 auto;padding:0 var(--pad) 72px;flex:1}
+.seccion{display:flex;flex-direction:column;gap:22px;flex:1 1 100%;padding:var(--card-pad);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card)}
+.caja-enlaces{display:flex;flex-wrap:wrap;gap:12px}
+.enlace{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:var(--r-btn);font-size:15px;transition:.25s}
+.enlace:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-text);transform:translateY(-2px)}
+.reto .enlace{flex:1 1 180px;flex-direction:column;align-items:flex-start;gap:2px}
+.reto .enlace small{font-family:var(--font-jp);font-size:11px;letter-spacing:.15em;opacity:.65}
+.pie{padding:28px var(--pad);text-align:center;font-family:var(--font-jp);font-size:13px;letter-spacing:.2em;color:var(--muted)}
+@media(min-width:901px){.ejercicio{flex:1 1 30%}.reto{flex:1 1 60%}}
+@media(max-width:900px){:root{--pad:24px}.encabezado{padding-top:32px;padding-bottom:32px}}
+@media(max-width:600px){:root{--pad:16px;--card-pad:20px}.encabezado{flex-direction:column;align-items:flex-start}.caja-enlaces{flex-direction:column}.enlace{width:100%}.contenedor{gap:16px}}
+
+/* 竹 Take: bambú a los lados, nudos verdes, tonos matcha */
+body{background:linear-gradient(90deg,rgba(127,174,90,.45) 0 14px,transparent 14px calc(100% - 14px),rgba(127,174,90,.45) calc(100% - 14px)),repeating-linear-gradient(180deg,transparent 0 118px,rgba(60,90,40,.35) 118px 122px),#eef2e3;background-size:100% 100%,100% 100%,auto}
+.kanji{color:#4f7a35;opacity:.18}
+h1{color:#2f5223}
+.seccion{border-left:10px solid var(--accent);border-radius:6px 14px 14px 6px}
+h2 .jp{background:var(--accent);color:#1d2b14;border-radius:50%;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;font-size:20px}
+.enlace{background:#fff}
+.enlace::before{content:"❙";color:var(--accent);font-weight:700}
+@media(max-width:900px){:root{--pad:32px}}
